@@ -1,0 +1,174 @@
+.award-item {
+    padding: 34px 0;
+    position: relative;
+    @include transition(.3s);
+    margin-top: -1px;
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        z-index: 1;
+        width: 0;
+        background: var(--color-heading);
+        @include transition(.3s);
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+        .xb-item {
+            &--icon img {
+                filter: brightness(0);
+            }
+            &--title {
+                color: #000;
+                span {
+                    color: var(--color-primary);
+                }
+            }
+            &--icon svg path {
+                fill: var(--color-primary);
+            }
+        }
+    }
+    .xb-item {
+        &--title {
+            font-weight: 500;
+            font-size: 36px;
+            color: rgba(0, 0, 0, 0.6);
+            @include transition(.3s);
+            @include respond(xs) {
+                font-size: 17px;
+                letter-spacing: 0;
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                margin-left: 10px;
+                color: #999999;
+                @include transition(.3s);
+            }
+        }
+        &--icon {
+            svg {
+                path {
+                    fill: #DFDFDF;
+                    @include transition(.3s);
+                }
+            }
+        }
+        &--line,
+        &--line-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #DFDFDF;
+        }
+        &--line-bottom {
+            top: auto;
+            bottom: 0;
+        }
+    }
+    .xb-img-reveal-wrapper {
+        width: 480px;
+        z-index: 1;
+        @include respond(lg) {
+            width: 350px;
+        }
+        @include respond(xs) {
+            width: 200px;
+        }
+    }
+}
+.award-single-item {
+    border-bottom: 1px solid var(--color-border);
+    min-height: 90px;
+    padding-top: 30px;
+    @include transition(.3s);
+    &:first-child {
+        border-top: 1px solid var(--color-border);
+    }
+    @include transition(.3s);
+    &:hover,
+    &.active {
+        min-height: 260px;
+        .xb-item--hover {
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            border-bottom: 1px solid var(--color-heading);
+        } 
+    }
+    .xb-item {
+        &--desc {
+            font-weight: 500;
+            width: 40%;
+            text-transform: uppercase;
+            @include respond(laptop) {
+                width: 30%;
+            }
+            @include respond(lg) {
+                width: 25%;
+            }
+            @include respond(md) {
+                width: 23%;
+            }
+            @include respond(xs) {
+                width: 54%;
+            }
+        }
+        &--contant {
+            
+            li {
+                font-weight: 500;
+                line-height: 40px;
+                color: var(--color-gray);
+                text-transform: uppercase;
+            }
+        }
+        &--img {
+            width: 35.7%;
+            margin-left: -95px;
+            margin-right: 95px;
+            @include respond(md) {
+                width: 30%;
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+        &--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            opacity: 0;
+            overflow: hidden;
+            background: #fff;
+            padding-top: 30px;
+            @include transition(.3s);
+        }
+    }
+}
+.award-warp {
+    padding-left: 200px;
+    @include respond(laptop) {
+        padding-left: 178px;
+    }
+    @include respond(lg) {
+        padding-left: 20px;
+    }
+}
+.pt-xs-30 {
+    @include respond(xs) {
+        padding-top: 30px;
+    }
+}
+.xb-award_wrap {
+	z-index: 1;
+	position: relative;
+}

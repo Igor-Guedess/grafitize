@@ -1,0 +1,65 @@
+.pricing-item {
+    background-color: var(--color-white);
+    padding: 40px 50px 45px;
+    @include respond(lg) {
+        padding: 35px;
+    }
+    @include respond(laptop) {
+        padding: 35px;
+    }
+    .xb-item {
+        &--price {
+            font-size: 80px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 13px;
+            @include respond(lg) {
+                font-size: 65px;
+            }
+            span {
+                font-size: 40px;
+            }
+        }
+        &--title {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 7px;
+            @include respond(lg) {
+                font-size: 28px;
+            }
+            span {
+                font-family: var(--font-newyork);
+            }
+        }
+        &--content {
+            margin-bottom: 30px;
+        }
+        &--list {
+            padding-top: 25px;
+            border-top: 1px solid #DFDFDF;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: var(--color-black);
+                &:not(:last-child) {
+                    margin-bottom: 13px;
+                }
+                i {
+                    color: var(--color-primary);
+                }
+            }
+        }
+        &--btn {
+            .thm-btn {
+                width: 100%;
+            }
+        }
+        &--text {
+            text-align: center;
+            color: #999999;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+}

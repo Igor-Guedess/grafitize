@@ -1,0 +1,222 @@
+.about-wrap {
+    .xb-item {
+        &--title {
+            font-weight: 600;
+            font-size: 16px;
+            padding: 7px 24px;
+            display: inline-block;
+            @include border-radius(50px);
+            border: 1px solid var(--color-border);
+            background: var(--color-white);
+            color: var(--color-heading);
+        }
+        &--link {
+            li {
+                margin-left: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+                &:hover {
+                    a {
+                        text-decoration: underline;
+                        color: var(--color-heading);
+                    }
+                }
+                a {
+                    text-transform: uppercase;
+                    color: var(--color-default);
+                    @include transition(.3s);
+                }
+            }
+        }
+    }
+}
+.about-sec-title {
+    padding-right: 100px;
+}
+.about-wrapper {
+    background: #000000;
+    @include border-radius(30px);
+}
+.about-video {
+    img {
+        @include border-radius(30px);
+    }
+}
+.abt-shape {
+    position: absolute;
+    right: 38%;
+    top: 18.4%;
+    z-index: 1;
+}
+.black-btn {
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 33px;
+    background: #000;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.xb-about-inner {
+    .xb-item {
+        &--title {
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &--content {
+            p {
+                width: 43%;
+                display: inline-block;
+                color: var(--color-gray);
+                margin-top: 20px;
+                @include respond(xs) {
+                    width: 100%;
+                }
+                &:not(:last-child) {
+                    margin-right: 60px;
+                    @include respond(lg) {
+                        margin-right: 30px;
+                    }
+                }
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .xb-feature {
+        li {
+            font-weight: 600;
+            line-height: 20px;
+            color: #000;
+            text-transform: uppercase;
+            margin-top: 20px;
+            &:not(:last-child) {
+                margin-right: 60px;
+                @include respond(lg) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+.about-right-img {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    max-width: 700px;
+    @include respond(laptop) {
+        max-width: 500px;
+    }
+    @include respond(lg) {
+        max-width: 350px;
+    }
+    @include respond(md) {
+        position: unset;
+        margin: 40px auto 0;
+    }
+}
+.about-img-two {
+    top: 0;
+    max-width: 700px;
+    @include respond(laptop) {
+        max-width: 500px;
+        top: auto;
+        bottom: 200px;
+    }
+    @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+        max-width: 450px;
+    }
+    @include respond(lg) {
+        max-width: 400px;
+        top: auto;
+        bottom: 200px;
+    }
+    @include respond(xs) {
+        max-width: 300px;
+    }
+}
+.about-shape {
+    position: absolute;
+    bottom: 90px;
+    left: -110px;
+    @include respond(laptop) {
+        left: -50px;
+        max-width: 100px;
+    }
+    @include respond(lg) {
+        max-width: 80px;
+        left: -40px;
+    }
+}
+.about-title-shape {
+	position: absolute;
+	right: 16%;
+	top: 62%;
+    @include respond(lg) {
+        max-width: 40px;
+    }
+    @include respond(xs) {
+        right: -30px;
+    }
+}
+.about-content {
+    color: #999;
+    @include respond(laptop) {
+        padding-left: 0;
+    }
+    @include respond(lg) {
+        padding-left: 0;
+    }
+}
+.about-video.pos-rel {
+	overflow: hidden;
+    @include border-radius(30px);
+}
+.about-image {
+    padding-right: 140px;
+    position: relative;
+    @include respond(lg) {
+        padding-right: 50px;
+    }
+}
+.about-shape-icon {
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &--1 {
+            top: -46px;
+            right: 80px;
+            @include respond(lg) {
+                right: 0;
+            }
+        }
+        &--2 {
+            bottom: 25%;
+            right: 60px;
+            z-index: 1;
+            @include respond(lg) {
+                max-width: 70px;
+                right: 20px;
+            }
+        }
+    }
+}
+.about-cirlce-text {
+    position: absolute;
+    bottom: -74px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    img {
+        animation: spin 50s infinite linear;
+    }
+}
+.about-content-inner {
+    @include respond(laptop) {
+        padding-right: 150px;
+    }
+    @include respond(lg) {
+        padding-right: 100px;
+    }
+}

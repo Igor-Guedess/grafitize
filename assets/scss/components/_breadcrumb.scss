@@ -1,0 +1,118 @@
+.breadcrumb {
+    padding-top: 85px;
+    padding-bottom: 110px;
+    min-height: 450px;
+    z-index: 1;
+    @include respond(laptop) {
+        min-height: 370px;
+    }
+    @include respond(lg) {
+        min-height: 330px;
+        background-position: 75% center;
+    }
+    @include respond(xs) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-position: 45% center;
+        min-height: 260px;
+    }
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 26px;
+        @include respond(lg) {
+            margin-bottom: 10px;
+        }
+        @include respond(xs) {
+            font-size: 16px;
+        }
+    }
+    &__title {
+        font-size: 80px;
+        line-height: 65px;
+        color: var(--color-white);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        @include respond(laptop) {
+            font-size: 60px;
+        }
+        @include respond(lg) {
+            font-size: 50px;
+        }
+        span {
+            font-family: var(--font-newyork);
+        }
+        @include respond(xs) {
+            font-size: 34px;
+            line-height: 45px;
+            letter-spacing: -0.44px;
+            margin-bottom: 5px;
+        }
+    }
+    &__list {
+        display: inline-flex;
+        justify-content: flex-end;
+        padding: 4px 12px;
+        @include border-radius(30px);
+        border: 1px solid var(--color-primary);
+        li {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.2;
+            display: inline-block;
+            color: var(--color-white);
+            position: relative;
+            &:not(:first-child) {
+                padding-left: 11px;
+            }
+            & + .breadcrumb-item::before {
+                color: var(--color-primary);
+                content: "\f105";
+                font-weight: 400;
+                font-family: "Font Awesome 6 Pro";
+                font-size: 12px;
+                @include transform(translate(-1px, 3px));
+            }
+            a {
+                color: #ffffff;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__shape {
+        .shape {
+            position: absolute;
+            z-index: -1;
+            &--1 {
+                bottom: 0;
+                left: 17%;
+                @include respond(laptop) {
+                    max-width: 500px;
+                }
+                @include respond(lg) {
+                    max-width: 400px;
+                }
+            }
+            &--2 {
+                top: 11px;
+                left: 48%;
+                @include respond(laptop) {
+                    max-width: 100px;
+                }
+                @include respond(lg) {
+                    max-width: 100px;
+                }
+                @include respond(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

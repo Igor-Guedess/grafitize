@@ -1,0 +1,290 @@
+.accordion_box {
+    .block {
+        position: relative;
+        overflow: hidden;
+        padding: 35px 0;
+        border-bottom: 1px solid var(--color-border);
+        &:first-child {
+            border-top: 1px solid var(--color-border);
+        }
+        .acc_body {
+            position: relative;
+	        display: none;
+            margin-top: 22px;
+            .content {
+                line-height: 26px;
+                color: var(--color-gray);
+                align-items: start;
+                padding-left: 58px;
+                @include respond(lg) {
+                    padding-left: 0;
+                }
+                p {
+                    max-width: 428px;
+                    display: inline-block;
+                    line-height: 26px;
+                }
+                .more-btn {
+                    font-weight: 600;
+                    display: block;
+                    margin-top: 25px;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    color: var(--color-primary);
+                }
+                .image {
+                    @include respond(lg) {
+                        margin-top: 30px;
+                    }
+                }
+            }
+            &.current {
+                display: block;
+            }
+        }
+        .acc-btn {
+            cursor: pointer;
+            @include respond(xs) {
+                padding-right: 30px;
+            }
+            .number {
+                font-weight: 500;
+                font-size: 20px;
+                color: #DFDFDF;
+                margin-right: 35px;
+                @include respond(xs) {
+                    margin-right: 10px;
+                }
+            }
+            .title {
+                font-weight: 500;
+                font-size: 20px;
+                display: inline-block;
+                @include respond(lg) {
+                    font-size: 16px;
+                }
+            }
+            .arrow {
+                position: absolute;
+                right: 20px;
+                top: 35px;
+            }
+        }
+        .acc-btn .arrow::before {
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.4);
+            content: "\f067";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 300;
+            position: absolute;
+            transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        &.active-block {
+            border-bottom: 1px solid #000;
+            .number {
+                color: #000;
+                transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            .acc-btn .arrow::before {
+                content: "\f068";
+                transform: rotate(180deg);
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+.xb-faq {
+    padding-right: 71px;
+    @include respond(md) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.faq-right {
+    margin-left: -10px;
+    @include respond(xs) {
+        margin-left: 0;
+    }
+    .xb-content {
+        line-height: 26px;
+        color: var(--color-gray);
+    }
+}
+.faq-image {
+    @include border-radius(30px);
+    overflow: hidden;
+    position: relative;
+    max-width: 813px;
+}
+.circle-video {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.faq_style2 {
+    .block {
+        border: 1px solid #DFDFDF;
+        margin-bottom: 20px;
+        padding: 19px 26px;
+        @include border-radius(20px);
+        padding-top: 0;
+        padding-bottom: 0;
+        &:first-child {
+            border-color: #DFDFDF;
+        }
+        .acc-btn {
+            padding-top: 19px;
+            padding-bottom: 19px;
+        }
+        .acc_body {
+            padding-bottom: 19px;
+            margin-top: 6px;
+            .content {
+                padding-left: 0;
+                gap: 30px;
+                @include respond(xs) {
+                    gap: 0;
+                }
+                p {
+                    max-width: 512px;
+                    display: block;
+                }
+                .more-btn {
+                    color: var(--color-black);
+                    border: 1px solid var(--color-primary);
+                    padding: 15px 30px;
+                    @include border-radius(40px);
+                    display: inline-block;
+                    text-decoration: none;
+                    margin-top: 35px;
+                    &:hover {
+                        background-color: var(--color-primary);
+                        color: var(--color-white);
+                    }
+                }
+                .image {
+                    width: 226px;
+                    @include border-radius(10px);
+                    overflow: hidden;
+                    @include respond(lg) {
+                        margin-top: 0;
+                    }
+                    @include respond(xs) {
+                        margin-top: 30px;
+                    }
+                }
+               
+            }
+        }
+        .acc-btn {
+            .title {
+                font-size: 18px;
+            }
+            .arrow {
+                top: 29px;
+                &::before {
+                    top: -10px;
+                    left: auto;
+                    right: 6px;
+                    color: #000;
+                }
+                
+            }
+        }
+        &.active-block {
+            border-color: #000;
+            .acc-btn .arrow::before {
+                color: var(--color-black);
+            }
+        }
+    }
+    &.border-none .block {
+        @include border-radius(0);
+    }
+}
+.faq-inner {
+    padding-left: 40px;
+    @include respond(md) {
+        padding-left: 0;
+    }
+    .image {
+        max-width: 226px;
+        @include border-radius(10px);
+        overflow: hidden;
+    }
+}
+.faq-img {
+	right: -192px;
+	position: relative;
+	top: -60px;
+    margin-left: -103px;
+    @include respond(laptop) {
+        right: 0;
+        margin-left: 0;
+    }
+    @include respond(lg) {
+        right: 0;
+        margin-left: 0;
+    }
+    @include respond(md) {
+        top: 20px;
+        margin-bottom: 100px;
+    }
+}
+.xb-faq-inner {
+    @include respond(md) {
+        padding-right: 0;
+    }
+}
+.faq-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    @include respond(xs) {
+        font-size: 24px;
+    }
+}
+.faq-wrap {
+    border-right: 1px solid #DFDFDF;
+    padding-right: 78px;
+    margin-right: -25px;
+    @include respond(lg) {
+        padding-right: 30px;
+        margin-right: 40px;
+    }
+    @include respond(md) {
+        padding-right: 0;
+        margin-right: 0;
+        border: 0;
+    }
+    .block .acc_body .content p {
+        max-width: 100%;
+        display: block;
+    }
+    .content-inner {
+        width: 73%;
+        @include respond(xs) {
+            width: 100%;
+        }
+    }
+   .block .acc_body .content .more-btn {
+        margin-top: 60px;
+    }
+    .block .acc_body .content .image {
+        @include border-radius(0);
+        overflow: hidden;
+    }
+}
+.faq-sidebar {
+    .widget {
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 26px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #DFDFDF;
+        }
+    }
+}

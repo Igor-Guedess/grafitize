@@ -1,0 +1,359 @@
+.career-gallery-slider {
+  margin-left: -350px;
+  margin-right: -350px;
+
+  @include respond(lg) {
+    margin-left: -200px;
+    margin-right: -200px;
+  }
+
+  @include respond(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.career-item {
+  padding: 34px 0;
+  position: relative;
+  @include transition(.3s);
+  margin-top: -1px;
+  gap: 30px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    z-index: 1;
+    width: 0;
+    background: var(--color-primary);
+    @include transition(.3s);
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+
+    .xb-item {
+      &--btn {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .xb-item {
+    &--holder {
+      gap: 10px 40px;
+    }
+
+    &--item {
+      width: 365px;
+
+      span {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+    }
+
+    &--title {
+      font-weight: 500;
+      font-size: 32px;
+      color: var(--color-black);
+      @include transition(.3s);
+
+      @include respond(xs) {
+        font-size: 17px;
+        letter-spacing: 0;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        margin-left: 10px;
+        color: #999999;
+        @include transition(.3s);
+      }
+    }
+
+    &--btn {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--color-heading);
+      line-height: 1;
+      border: 1px solid var(--color-primary);
+      border-radius: 30px;
+      padding: 5px 9px;
+      display: inline-block;
+      margin-right: 14px;
+      @include transition(.3s);
+    }
+
+    &--line,
+    &--line-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #DFDFDF;
+    }
+
+    &--line-bottom {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  .xb-img-reveal-wrapper {
+    width: 480px;
+    z-index: 1;
+
+    @include respond(lg) {
+      width: 350px;
+    }
+
+    @include respond(xs) {
+      width: 200px;
+    }
+  }
+}
+
+.xb-career_wrap {
+  z-index: 1;
+  position: relative;
+}
+
+.career-hr {
+  padding-top: 104px;
+  border-color: #000;
+}
+.career-info-inner {
+  gap: 30px 40px;
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 35px;
+}
+.career-info-head {
+  p {
+    font-size: 14px;
+    margin-bottom: 7px;
+    span {
+      color: var(--color-primary);
+    }
+  }
+  h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    @include respond(xs) {
+      font-size: 24px;
+    }
+  }
+}
+.career-info {
+  gap: 20px 40px;
+  .xb-item {
+    &--item {
+      font-size: 14px;
+      line-height: 24px;
+      span {
+        color: #000;
+      }
+    }
+  }
+}
+.career-single-content {
+  margin-right: -50px;
+  @include respond(lg) {
+    margin-right: 0;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 27px;
+    @include respond(xs) {
+      font-size: 20px;
+    }
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.career-list {
+  li {
+    padding-left: 40px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 0;
+      width: 20px;
+      height: 1px;
+      background-color: var(--color-primary);
+      content: "";
+    }
+  }
+}
+.career-skills {
+  gap: 10px;
+  li {
+    padding: 13px 24px;
+    text-transform: uppercase;
+    border: 1px solid #DFDFDF;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1;
+  }
+}
+
+
+
+.career-sidebar {
+  margin-left: 80px;
+  @include respond(lg) {
+    margin-left: 20px;
+  }
+  @include respond(md) {
+    margin-left: 0;
+  }
+}
+.career-form {
+  padding: 40px 53px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #DFDFDF;
+  @include respond(laptop) {
+    padding: 30px;
+  }
+  @include respond(lg) {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 10px;
+    .icon {
+      position: absolute;
+      top: 10px;
+      font-size: 13px;
+      left: 20px;
+      color: #000;
+    }
+  }
+
+
+  .upload-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .required {
+    color: red;
+  }
+
+  .file-input {
+    margin-top: 8px;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    color: #999999;
+    width: 100%;
+  }
+  .form-group label {
+    font-size: 14px;
+    display: block;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 23px;
+  }
+  .form-group label .fa {
+    margin-right: 5px;
+  }
+  .form-group .required {
+    color: red;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #DFDFDF;
+    outline: none;
+    padding-left: 42px;
+    height: 50px;
+    background-color: transparent;
+    @include transition(.3s);
+    &:focus {
+      border-color: var(--color-primary);
+    }
+  }
+  textarea {
+    resize: none;
+    min-height: 200px;
+  }
+  .upload-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .upload-input {
+    display: none;
+  }
+  .upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F1F1F1;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  .file-name {
+    font-size: 14px;
+    color: #999999;
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+}
+.report-job {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  display: inline-block;
+  margin-top: 22px;
+  padding-left: 53px;
+  font-weight: 700;
+  @include respond(laptop) {
+    padding-left: 30px;
+  }  
+  @include respond(lg) {
+    padding-left: 30px;
+  }
+}
+
+.report-job .fa {
+  margin-right: 5px;
+  color: var(--color-primary);
+}

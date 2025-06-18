@@ -1,0 +1,8 @@
+// This file contains all @font-face declarations, if any.
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: 'NewYork PERSONAL USE';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NewYork PERSONAL USE'), url('../fonts/NewYork PERSONAL USE.woff') format('woff');
+}
