@@ -54,7 +54,7 @@
   --font-body: "Inter", sans-serif;
   --font-heading: "Inter", sans-serif;
   --font-newyork: 'NewYork PERSONAL USE';
-  --color-primary: #FD6442;
+  --color-primary: #096AF9;
   --color-primary-rgb: 253, 100, 66;
   --color-heading: #000;
   --color-default: #666666;
@@ -1556,6 +1556,10 @@ body.body-overflow {
 .pr-200 {
   padding-right: 200px; }
 
+.font-085 {
+  font-size: 0.85rem;
+}
+
 /* typography css start */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -2687,7 +2691,7 @@ body[data-aos-easing=ease] [data-aos] {
   margin-left: 5px; }
 
 .header-style-three {
-  background: var(--color-heading);
+  background: var(--color-white);
   padding-top: 30px;
   z-index: 2;
   position: relative; }
@@ -2715,16 +2719,16 @@ body[data-aos-easing=ease] [data-aos] {
         padding-left: 0;
         padding-right: 0; } }
   .header-style-three .main-menu ul li a {
-    color: var(--color-white); }
+    color: var(--color-black); }
   .header-style-three .main-menu ul li .submenu li a {
     color: #000; }
   .header-style-three .header-right .header-contact {
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(0, 0, 0, 0.6); }
     @media (max-width: 1199px) {
       .header-style-three .header-right .header-contact {
         display: none; } }
     .header-style-three .header-right:hover {
-      color: var(--color-white); }
+      color: var(--color-black); }
   .header-style-three .header-right .header-menu {
     background: #fff;
     border: none;
