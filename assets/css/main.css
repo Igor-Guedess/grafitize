@@ -5335,7 +5335,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       margin-bottom: 60px; } }
 
 .portfolio-right .xb-portfolio-item:not(:last-child) {
-  margin-bottom: 304px; }
+  margin-bottom: 200px; }
   @media (max-width: 991px) {
     .portfolio-right .xb-portfolio-item:not(:last-child) {
       margin-bottom: 60px; } }
