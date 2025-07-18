@@ -421,7 +421,6 @@ body.body-overflow {
   align-items: center; }
 
 .ul_li > li, .ul_li_right > li, .ul_li_center > li, .ul_li_between > li {
-  float: left;
   list-style: none;
   display: inline-block; }
 
@@ -1560,6 +1559,10 @@ body.body-overflow {
   font-size: 0.85rem;
 }
 
+.smallcase {
+  text-transform: none !important;
+}
+
 /* typography css start */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -2004,14 +2007,14 @@ h6 {
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-@-webkit-keyframes zoominup {
+@keyframes zoominup {
   0% {
     transform: scale(1.2); }
   50% {
     transform: scale(1); }
   100% {
     transform: scale(1.2); } }
-@-webkit-keyframes updown {
+@keyframes updown {
   0% {
     transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
@@ -2030,7 +2033,7 @@ h6 {
     -moz-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     -o-transform: translateY(-10px); } }
-@-webkit-keyframes updown-2 {
+@keyframes updown-2 {
   0% {
     transform: translateY(-15px);
     -webkit-transform: translateY(-15px);
@@ -2063,7 +2066,7 @@ h6 {
     width: 0;
     opacity: 0; } }
 /*circleAnimation*/
-@-webkit-keyframes circleAnimation {
+@keyframes circleAnimation {
   0%,
     100% {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
@@ -9216,7 +9219,7 @@ blockquote {
   margin-left: 30px; }
   .hamburger-menu .line {
     width: 30px;
-    background: var(--color-white);
+    background: var(--color-black);
     margin: 6px 0 0 0;
     height: 2px;
     display: block;
