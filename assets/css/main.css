@@ -64,7 +64,13 @@
   --color-black: #000;
   --color-dark: #0F172A;
   --color-white: #fff;
-  --color-body: #F7F5F2; }
+  --color-body: #F7F5F2;
+  --color-cinzaescuro: #2F3849;
+  --color-azul: #096AF9;
+  --color-verde: #48F97D;
+  --color-vermelho: #EC1B3B;
+  --color-cinzaclaro: #F7F2EF;
+  --color-amarelo: #FFD300; }
 
 @font-face {
   font-family: 'NewYork PERSONAL USE';
@@ -4132,7 +4138,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     .hero-style-three .hero-wrapper .hero-title .title {
       display: flex;
       align-items: center;
-      color: var(--color-white); }
+      color: var(--color-cinzaescuro); }
       @media (max-width: 1199px) {
         .hero-style-three .hero-wrapper .hero-title .title {
           margin-bottom: 20px; } }
@@ -4154,7 +4160,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
         font-weight: 500;
         font-size: 20px;
         line-height: 34px;
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--color-cinzaescuro);
         display: inline-block;
         text-transform: capitalize;
         letter-spacing: 0;
